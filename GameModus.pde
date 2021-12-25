@@ -7,6 +7,7 @@ void Spiel () {
   fill (#2e1d03);
   rect(50, 50, width - 50, height - 50);
   fill(255);
+  calculateAcceleration();
   Figur();
   placeObstacles(xKoordinaten, yKoordinaten);
   takeDamage();
