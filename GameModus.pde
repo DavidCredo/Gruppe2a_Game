@@ -9,6 +9,7 @@ void Spiel () {
   fill(255);
   calculateAcceleration();
   Figur();
+  checkBoarderCollision();
   placeObstacles(xKoordinaten, yKoordinaten);
   takeDamage();
   lebensAnzeige();
