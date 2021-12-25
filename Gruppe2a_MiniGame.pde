@@ -7,6 +7,9 @@ boolean isPause = false;
 boolean gameOver = false;
 int x = 100;
 int y = 100;
+PVector position = new PVector(20,20);
+PVector velocity = new PVector(0,0);
+PVector acceleration = new PVector(0,0);
 
 void setup() {
   fullScreen();

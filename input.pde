@@ -1,3 +1,19 @@
+PVector inputVector() {
+    PVector directionVector = new PVector(0,0);
+    if (keyPressed) {
+        if (key == 'w') {
+           directionVector.set(0, -10);
+        } else if(key == 'a') {
+             directionVector.set(-10, 0);
+        } else if(key == 's') {
+            directionVector.set(0, 10);
+        } else if(key == 'd') {
+            directionVector.set(10, 0);
+        }
+    }
+    return directionVector; 
+}
+
 void inputBewegung() {
   if (keyPressed) {
     if (key == 'd' && x <= width -75) {    //abfrage nach der gedrückten Taste und ob Figur sich innerhalb des SPielbereichs befindet
