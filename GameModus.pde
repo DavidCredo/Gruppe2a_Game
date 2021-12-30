@@ -13,6 +13,9 @@ void Spiel () {
   placeObstacles(xKoordinaten, yKoordinaten);
   takeDamage();
   lebensAnzeige();
+  countScore();
+  println(score);
+  
 }
 
 void PauseScreen() {
@@ -36,4 +39,5 @@ void gameOverScreen() {
   fill(255);
   textSize(100);
   text("Game Over! Press X to get back to menu", width/2, 200);
+  saveScore();
 }
