@@ -12,6 +12,7 @@ PVector velocity = new PVector(0,0);
 PVector acceleration = new PVector(0,0);
 
 void setup() {
+  frameRate(60);
   fullScreen();
   background(#485698);
   textSize(150);
