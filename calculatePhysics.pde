@@ -2,7 +2,7 @@ void calculateAcceleration() {
    PVector direction = inputVector();
    direction.normalize();
    acceleration = direction;
-   acceleration.mult(0.2);
+   acceleration.mult(0.5);
 }
 
 void checkBoarderCollision() {
