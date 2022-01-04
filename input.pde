@@ -13,30 +13,6 @@ PVector inputVector() {
     }
     return directionVector; 
 }
-
-void inputBewegung() {
-  if (keyPressed) {
-    if (key == 'd' && x <= width -75) {    //abfrage nach der gedrückten Taste und ob Figur sich innerhalb des SPielbereichs befindet
-      // bei "d" und "s" wird Figur die gewechselt, weil sich die Laufrichtung ändert
-      Figur1 = true;
-      Figur2 = false;
-
-      x+= 5;
-    } else if ( key == 's' && y <= height - 106) {      //Abfrage ob im Spielbereich, keine änderung der links/rechts richtung -> keine Änderung der Figur
-
-      y+=5;
-    } else if (key == 'a' && x >= 75) {
-
-      Figur1=false;
-      Figur2= true;
-
-      x-=5;
-    } else if (key == 'w' && y >= 82) {
-      y-=5;
-    }
-  }
-}
-
 //Funktion um das Spiel zu pausieren/resume
 void triggerPause() {
   if (keyPressed) {
@@ -74,9 +50,9 @@ void MausSteuern(){
     PVector MouseControl = new PVector (0,0);
     MouseControl.x= mouseX-position.x;
     MouseControl.y= mouseY-position.y;
-    MouseControl.normalize();
-    MouseControl.mult(10);
-    velocity= MouseControl;
+    //MouseControl.limit(10);
+    MouseControl.mult(dist(mouseX, mouseY, MouseControl.x, MouseControl.y));
+    velocity.add(MouseControl);
     
   }
   
