@@ -67,3 +67,12 @@ void triggerMenu() {
     }
   }
 }
+
+
+void MausSteuern(){
+  if(mousePressed){
+    position.x=mouseX;
+    position.y=mouseY;
+  }
+  
+}
