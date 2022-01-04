@@ -1,20 +1,7 @@
-boolean Figur1= true;
-boolean Figur2= false;
 int rotate = 0;
 
-void Figur() {
-  velocity.add(acceleration);
-  velocity.limit(10);
-  position.add(velocity);
+void drawPlayer() {
   
-  
- 
-  Ufo();
-   
-  
-}
-
-void Ufo() {
   pushMatrix();
   translate(position.x,position.y);
   rotate++;
