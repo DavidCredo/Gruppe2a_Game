@@ -6,12 +6,7 @@ void Figur() {
   velocity.add(acceleration);
   velocity.limit(10);
   position.add(velocity);
-  
-  
- 
   Ufo();
-   
-  
 }
 
 void Ufo() {
