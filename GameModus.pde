@@ -33,6 +33,7 @@ void StartScreen() {
   textSize(100);
   text("Press M to Start", width/2, 200);
   gameOver = false;
+  showScore();
 }
 
 void gameOverScreen() {
