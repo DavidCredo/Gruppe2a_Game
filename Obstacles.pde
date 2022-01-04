@@ -24,9 +24,9 @@ boolean checkCollision() {
   int playerRadius = 50;
 
   for (int i = 0; i < xKoordinaten.length; i++) {
-    float distX = position.x -xKoordinaten[i];
-    float distY = position.y -yKoordinaten[i];
-    float distance = sqrt((distX*distX) + (distY*distY));
+    float distX = position.x - xKoordinaten[i];
+    float distY = position.y - yKoordinaten[i];
+    float distance = sqrt((distX * distX) + (distY * distY));
     if (distance <= playerRadius + 50) {
       return true;
     }
