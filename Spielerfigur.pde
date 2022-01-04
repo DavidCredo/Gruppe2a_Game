@@ -1,5 +1,6 @@
 boolean Figur1= true;
 boolean Figur2= false;
+int rotate = 0;
 
 void Figur() {
   velocity.add(acceleration);
