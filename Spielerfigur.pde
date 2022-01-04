@@ -1,6 +1,6 @@
 boolean Figur1= true;
 boolean Figur2= false;
-int rotate = 0;
+float rotationAmount = 0;
 
 void Figur() {
   velocity.add(acceleration);
@@ -12,8 +12,8 @@ void Figur() {
 void Ufo() {
   pushMatrix();
   translate(position.x,position.y);
-  rotate++;
-  rotate(radians(-rotate));
+  rotationAmount++;
+  rotate(radians(-rotationAmount));
   fill(80);
   ellipse(0,0,100,100);
   for(int i = 0;i<=360;i+=45){
