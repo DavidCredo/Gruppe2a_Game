@@ -71,8 +71,13 @@ void triggerMenu() {
 
 void MausSteuern(){
   if(mousePressed){
-    position.x=mouseX;
-    position.y=mouseY;
+    PVector MouseControl = new PVector (0,0);
+    MouseControl.x= mouseX-position.x;
+    MouseControl.y= mouseY-position.y;
+    MouseControl.normalize();
+    MouseControl.mult(10);
+    velocity= MouseControl;
+    
   }
   
 }

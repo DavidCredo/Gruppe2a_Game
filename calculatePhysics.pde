@@ -12,4 +12,3 @@ void checkBoarderCollision() {
         velocity.y *= -1.1;
     } 
 }
-

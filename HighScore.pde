@@ -11,4 +11,3 @@ void saveScore() {
     highscore[0] = currentHighScore;
     saveStrings("highscore.txt", highscore);
 }
-
