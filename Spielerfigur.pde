@@ -10,7 +10,7 @@ void Figur() {
   //Beine
   if (Figur1) {
 
-    fill(255, 0, 0);
+    /*fill(255, 0, 0);
     //Beine
     rectMode(CORNERS);
     //linkes Bein
@@ -32,6 +32,9 @@ void Figur() {
     //Rucksack oder Sauerstofftank
     fill(255, 0, 0);
     rect(position.x-25, position.y-20, position.x-45, position.y+20);
+    */
+    
+    Ufo();
    
   } else if (Figur2) {
 
@@ -63,7 +66,7 @@ void Figur() {
 }
 
 void Ufo() {
-  
+  pushMatrix();
   translate(position.x,position.y);
   rotate++;
   rotate(radians(-rotate));
@@ -81,5 +84,5 @@ void Ufo() {
   }
   fill(150);
   ellipse(0,0,50,50);
-  
+  popMatrix();
 }
