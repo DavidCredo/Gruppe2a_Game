@@ -9,7 +9,7 @@ void Spiel () {
   fill(255);
   MausSteuern();
   calculateAcceleration();
-  Figur();
+  drawPlayer();
   checkBoarderCollision();
   placeObstacles(xKoordinaten, yKoordinaten);
   takeDamage();
