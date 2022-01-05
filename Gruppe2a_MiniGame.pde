@@ -4,8 +4,8 @@ boolean isStart = true;
 boolean isPlaying = false;
 boolean isPause = false;
 boolean gameOver = false;
-PVector position = new PVector(120,120);
-PVector velocity = new PVector(0,0);
+PVector position = new PVector(120, 120);
+PVector velocity = new PVector(0, 0);
 int score = 0;
 
 void setup() {

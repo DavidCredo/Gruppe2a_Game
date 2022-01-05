@@ -4,16 +4,16 @@ void lebensAnzeige() {  //die hp Anzeige
   text("Leben:", 50, height -20 );
   fill(255, 0, 0);
   //je nach Lebenspunkten werden 3, 2, oder 1 Herzen angezeigt.
-  if (livePoints > 50) {
+  if (lifePoints > 50) {
     drawHeart(100, height - 50);
     drawHeart(40, 0);
     drawHeart(40, 0);
   }
-  if (livePoints > 25 && livePoints <= 50) {
+  if (lifePoints > 25 && lifePoints <= 50) {
     drawHeart(100, height - 50);
     drawHeart(40, 0);
   }
-  if (livePoints <= 25) {
+  if (lifePoints <= 25) {
     drawHeart(100, height - 50);
   }
 }

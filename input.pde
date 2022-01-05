@@ -1,17 +1,17 @@
 PVector inputVector() {
-    PVector directionVector = new PVector(0,0);
-    if (keyPressed) {
-        if (key == 'w') {
-           directionVector.set(0, -10);
-        } else if(key == 'a') {
-             directionVector.set(-10, 0);
-        } else if(key == 's') {
-            directionVector.set(0, 10);
-        } else if(key == 'd') {
-            directionVector.set(10, 0);
-        }
+  PVector directionVector = new PVector(0, 0);
+  if (keyPressed) {
+    if (key == 'w') {
+      directionVector.set(0, -10);
+    } else if (key == 'a') {
+      directionVector.set(-10, 0);
+    } else if (key == 's') {
+      directionVector.set(0, 10);
+    } else if (key == 'd') {
+      directionVector.set(10, 0);
     }
-    return directionVector; 
+  }
+  return directionVector;
 }
 
 //Funktion um das Spiel zu pausieren/resume
@@ -37,7 +37,7 @@ void triggerMenu() {
       isStart = true;
       isPlaying = false;
       isPause = false;
-      livePoints = 100;
+      lifePoints = 100;
       position.x= 100;
       position.y= 100;
       makeObstacles();
@@ -46,13 +46,13 @@ void triggerMenu() {
 }
 
 
-void MausSteuern(){
-  if(mousePressed){
-    PVector MouseControl = new PVector (0,0);
+void MausSteuern() {
+  if (mousePressed) {
+    PVector MouseControl = new PVector (0, 0);
     MouseControl.x= mouseX-position.x;
     MouseControl.y= mouseY-position.y;
     //MouseControl.limit(10);
     MouseControl.mult(dist(mouseX, mouseY, MouseControl.x, MouseControl.y));
-    velocity.add(MouseControl);    
-  } 
+    velocity.add(MouseControl);
+  }
 }

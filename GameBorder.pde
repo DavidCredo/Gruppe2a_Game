@@ -15,7 +15,7 @@ int [] blubbYRight = new int [20];
 
 //hier werden die x und y Koordinaten der BlubberBlasen erzeugt
 void createBoarder() {
-  
+
   for (int i =0; i<20; i++) {
     blubbXLinks[i] = int (random (50));
     blubbYLinks[i] = int (random (height));
