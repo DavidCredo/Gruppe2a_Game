@@ -52,8 +52,6 @@ void MausSteuern(){
     MouseControl.y= mouseY-position.y;
     //MouseControl.limit(10);
     MouseControl.mult(dist(mouseX, mouseY, MouseControl.x, MouseControl.y));
-    velocity.add(MouseControl);
-    
-  }
-  
+    velocity.add(MouseControl);    
+  } 
 }
