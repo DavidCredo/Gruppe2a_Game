@@ -38,5 +38,6 @@ void gameOverScreen() {
   fill(255);
   textSize(100);
   text("Game Over! Press X to get back to menu", width/2, 200);
+  velocity.set(0,0);
   saveScore();
 }
