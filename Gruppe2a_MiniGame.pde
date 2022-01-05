@@ -1,6 +1,5 @@
 float[] xKoordinaten = new float[20];
 float[] yKoordinaten = new float[20];
-int obstacleWidth = 100;
 boolean isStart = true;
 boolean isPlaying = false;
 boolean isPause = false;
