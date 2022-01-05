@@ -1,5 +1,4 @@
 void Spiel () {
-
   background(80);
   rectMode(CORNERS);
   rect(0, 0, width, height);
@@ -15,8 +14,6 @@ void Spiel () {
   takeDamage();
   lebensAnzeige();
   countScore();
-  println(score);
-  
 }
 
 void PauseScreen() {

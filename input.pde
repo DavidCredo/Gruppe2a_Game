@@ -13,6 +13,7 @@ PVector inputVector() {
     }
     return directionVector; 
 }
+
 //Funktion um das Spiel zu pausieren/resume
 void triggerPause() {
   if (keyPressed) {

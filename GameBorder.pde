@@ -11,10 +11,11 @@ int [] blubbYHigh = new int [20];
 int [] blubbXRight = new int [20];
 int [] blubbYRight = new int [20];
 
-boolean blubbernHoch = true;
+
 
 //hier werden die x und y Koordinaten der BlubberBlasen erzeugt
 void createBoarder() {
+  
   for (int i =0; i<20; i++) {
     blubbXLinks[i] = int (random (50));
     blubbYLinks[i] = int (random (height));
@@ -28,6 +29,7 @@ void createBoarder() {
 }
 
 void FeldAnimation() {
+  boolean blubbernHoch = true;
   background(#ED7D0C);
   fill(#DE0B0B);
   noStroke();
