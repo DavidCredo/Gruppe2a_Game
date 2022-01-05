@@ -51,8 +51,8 @@ void MausSteuern() {
     PVector MouseControl = new PVector (0, 0);
     MouseControl.x= mouseX-position.x;
     MouseControl.y= mouseY-position.y;
-    //MouseControl.limit(10);
-    MouseControl.mult(dist(mouseX, mouseY, MouseControl.x, MouseControl.y));
+    MouseControl.normalize();
+    MouseControl.mult(10);
     velocity.add(MouseControl);
   }
 }
