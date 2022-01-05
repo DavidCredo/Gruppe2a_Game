@@ -4,8 +4,8 @@ void drawPlayer() {
   
   pushMatrix();
   translate(position.x,position.y);
-  rotate++;
-  rotate(radians(-rotate));
+  rotationAmount++;
+  rotate(radians(-rotationAmount));
   fill(80);
   ellipse(0,0,100,100);
   for(int i = 0;i<=360;i+=45){
