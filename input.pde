@@ -37,8 +37,8 @@ void triggerMenu() {
       isPlaying = false;
       isPause = false;
       livePoints = 100;
-      x= 100;
-      y= 100;
+      position.x= 100;
+      position.y= 100;
       makeObstacles();
     }
   }
