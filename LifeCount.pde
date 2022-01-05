@@ -4,7 +4,7 @@ int livePoints = 100;
 void takeDamage() {
   println(livePoints);
   if (checkCollision() && livePoints >= 0) {
-    livePoints -= 1;
+    livePoints -= 10;
   }
   // Sobald HP = 0, ist das Spiel verloren. gameOver Screen wird angezeigt.
   if (livePoints == 0) {
