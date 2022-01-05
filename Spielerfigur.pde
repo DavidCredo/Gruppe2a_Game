@@ -1,4 +1,4 @@
-int rotate = 0;
+int rotationAmount = 0;
 
 void drawPlayer() {
   

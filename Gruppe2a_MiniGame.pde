@@ -9,7 +9,6 @@ int x = 100;
 int y = 100;
 PVector position = new PVector(120,120);
 PVector velocity = new PVector(0,0);
-
 int score = 0;
 
 void setup() {
