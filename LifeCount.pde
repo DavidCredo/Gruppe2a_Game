@@ -1,13 +1,14 @@
 //Logik für die Spieler Health
-int livePoints = 100;
+int lifePoints = 100;
 //Funktion ermittelt ob Kollision vorliegt, wenn ja, werden die HP vermindert.
 void takeDamage() {
-  println(livePoints);
-  if (checkCollision() && livePoints >= 0) {
-    livePoints -= 10;
+  if (checkCollision() && lifePoints >= 0) {
+    println("Current LifePoints: " + lifePoints);
+    lifePoints -= 10;
   }
   // Sobald HP = 0, ist das Spiel verloren. gameOver Screen wird angezeigt.
-  if (livePoints == 0) {
+  if (lifePoints == 0) {
+    println("Zoinks, 0 LifePoints!");
     gameOver = true;
     isPlaying = false;
   }
