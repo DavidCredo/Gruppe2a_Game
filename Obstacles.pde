@@ -14,7 +14,7 @@ void makeObstacles() {
 void placeObstacles (float[] xKoordinaten, float[] yKoordinaten) {
   int obstacleWidth = 100;
   for (int i = 0; i < xKoordinaten.length; i++) {
-    fill(#960000);
+    fill(#DA3E52);
     ellipseMode(CENTER);
     ellipse(xKoordinaten[i], yKoordinaten[i], obstacleWidth, obstacleWidth);
   }

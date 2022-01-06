@@ -1,6 +1,6 @@
 
 
-int blubbGröße = 0;
+int blubbGroeße = 0;
 
 int  [] blubbXLinks = new  int [20];
 int  [] blubbYLinks = new int  [20];
@@ -34,23 +34,23 @@ void FeldAnimation() {
 
 
   //hier wird geguckt, ob die blasen groß/klein genug sind, um den Prozess umzukehren
-  if (blubbGröße>100) {
+  if (blubbGroeße>100) {
     blubbernHoch=false;
   }
-  if (blubbGröße<1) {
+  if (blubbGroeße<1) {
     blubbernHoch=true;
   }
 
   //hier werden die Blubberblasen gemalt
   for (int i = 0; i<20; i++) {
-    ellipse(blubbXLinks[i], blubbYLinks[i], blubbGröße/5, blubbGröße/5);
-    ellipse(blubbXHigh[i], blubbYHigh[i], blubbGröße/5, blubbGröße/5);
-    ellipse(blubbXRight[i], blubbYRight[i], blubbGröße/5, blubbGröße/5);
+    ellipse(blubbXLinks[i], blubbYLinks[i], blubbGroeße/5, blubbGroeße/5);
+    ellipse(blubbXHigh[i], blubbYHigh[i], blubbGroeße/5, blubbGroeße/5);
+    ellipse(blubbXRight[i], blubbYRight[i], blubbGroeße/5, blubbGroeße/5);
   }
   //blasen werden größer bzw kleiner
   if (blubbernHoch == true) {
-    blubbGröße++;
+    blubbGroeße++;
   } else if (blubbernHoch == false) {
-    blubbGröße--;
+    blubbGroeße--;
   }
 }

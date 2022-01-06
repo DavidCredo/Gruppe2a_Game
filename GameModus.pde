@@ -3,7 +3,7 @@ void Spiel () {
   rectMode(CORNERS);
   rect(0, 0, width, height);
   FeldAnimation();
-  fill (#2e1d03);
+  fill (#5438DC);
   rect(50, 50, width - 50, height - 50);
   fill(255);
   MausSteuern();
