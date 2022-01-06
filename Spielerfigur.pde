@@ -1,11 +1,11 @@
 int rotationAmount = 0;
 
+//Zeichnet den Spieler
 void drawPlayer() {
-
   pushMatrix();
   translate(position.x, position.y);
   rotationAmount++;
-  rotate(radians(-rotationAmount));
+  rotate(radians(-rotationAmount)); //Nutzt rotate() um das resultierende Ufo permanent um die eigene Achse rotieren zu lassen
   fill(80);
   ellipse(0, 0, 100, 100);
   for (int i = 0; i<=360; i+=45) {

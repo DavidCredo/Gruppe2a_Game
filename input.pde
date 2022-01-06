@@ -1,5 +1,6 @@
+// Funktion, die einen Vektor zurückgibt, relativ zum Tasteninput
 PVector inputVector() {
-  PVector directionVector = new PVector(0, 0);
+  PVector directionVector = new PVector(0, 0); //directionVector wird genutzt um Richtung der Bewegung zu geben
   if (keyPressed) {
     if (key == 'w') {
       directionVector.set(0, -10);
@@ -45,7 +46,7 @@ void triggerMenu() {
   }
 }
 
-
+//Mouse Input zur Steuerung des Spielers
 void MausSteuern() {
   if (mousePressed) {
     PVector MouseControl = new PVector (0, 0);
