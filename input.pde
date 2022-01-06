@@ -48,8 +48,8 @@ void triggerMenu() {
 
 void MausSteuern() {
   if (mousePressed &&
-     (mouseX > 100 && mouseX < width - 100) &&
-     (mouseY > 100 && mouseY < height - 100)) {
+    (mouseX > 100 && mouseX < width - 100) &&
+    (mouseY > 100 && mouseY < height - 100)) {
     PVector MouseControl = new PVector (0, 0);
     MouseControl.x= mouseX-position.x;
     MouseControl.y= mouseY-position.y;
