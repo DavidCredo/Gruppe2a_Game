@@ -7,7 +7,7 @@ void playMusic() {
 
   music = new SoundFile(this, "Sci-Fi-Dramatic-Theme.mp3");
   music.amp(0.5);
-  music.loop();
+  //music.loop();
 }
 //Startet oder stoppt die Musik je nach game state.
 void toggleMusic() {
