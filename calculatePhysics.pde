@@ -1,10 +1,10 @@
 //
 void calculateVelocity() {
   PVector acceleration = inputVector().normalize(); //Richtungsvektor wird mit acceleration gleichgesetzt, da der Spieler keine "Masse" hat
-  acceleration.mult(0.5); //Acceleration wird bei jedem Aufruf mit 0.5 multipliziert
+  acceleration.mult(0.5); 
   velocity.add(acceleration);
   position.add(velocity);
-  velocity.limit(10); //Damit die velocity nicht endlos groß wird, wird die limit() Funktion mit 10 aufgerufen
+  velocity.limit(10); //Damit die velocity nicht endlos groß wird, wird die Länge des Vektors limitert auf 10
 }
 
 //checkt ob eine Kollision mit einer Spielbegrenzung oder einem Hindernis vorliegt
