@@ -51,11 +51,13 @@ void MausSteuern() {
   if (mousePressed &&
      (mouseX > 100 && mouseX < width - 100) &&
      (mouseY > 100 && mouseY < height - 100)) {
-    PVector MouseControl = new PVector (0, 0);
-    MouseControl.x= mouseX - position.x;
-    MouseControl.y= mouseY - position.y;
-    MouseControl.normalize();
-    MouseControl.mult(10);
-    velocity.add(MouseControl);
+    PVector mouseControl = new PVector (0, 0);
+    mouseControl.x= mouseX - position.x;
+    mouseControl.y= mouseY - position.y;
+    mouseControl.normalize();
+    mouseControl.mult(10);
+    if(dist(mouseControl.x, mouseControl.y, position.x, position.y) > playerWidth) {
+    velocity.add(mouseControl);
+    }
   }
 }

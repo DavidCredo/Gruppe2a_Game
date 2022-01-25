@@ -22,7 +22,7 @@ void placeObstacles (float[] xKoordinaten, float[] yKoordinaten) {
 
 //Überprüft, ob der Spieler mit einem Hindernis kollidiert.
 boolean checkCollision() {
-  int playerWidth = 100;
+ 
 
   for (int i = 0; i < xKoordinaten.length; i++) {
     float distX = position.x - xKoordinaten[i];
