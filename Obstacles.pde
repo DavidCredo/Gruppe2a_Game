@@ -34,3 +34,4 @@ boolean checkCollision() {
   }
   return false;
 }
+

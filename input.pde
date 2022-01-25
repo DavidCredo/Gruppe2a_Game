@@ -38,7 +38,7 @@ void triggerMenu() {
       isStart = true;
       isPlaying = false;
       isPause = false;
-      lifePoints = 100;
+      healthPoints = 100;
       position.x= 100;
       position.y= 100;
       makeObstacles();
@@ -52,8 +52,8 @@ void MausSteuern() {
      (mouseX > 100 && mouseX < width - 100) &&
      (mouseY > 100 && mouseY < height - 100)) {
     PVector MouseControl = new PVector (0, 0);
-    MouseControl.x= mouseX-position.x;
-    MouseControl.y= mouseY-position.y;
+    MouseControl.x= mouseX - position.x;
+    MouseControl.y= mouseY - position.y;
     MouseControl.normalize();
     MouseControl.mult(10);
     velocity.add(MouseControl);

@@ -7,7 +7,7 @@ void calculateVelocity() {
   velocity.limit(10); //Damit die velocity nicht endlos groß wird, wird die Länge des Vektors limitert auf 10
 }
 
-//checkt ob eine Kollision mit einer Spielbegrenzung oder einem Hindernis vorliegt
+//Überprüft ob eine Kollision mit einer Spielbegrenzung oder einem Hindernis vorliegt
 void checkBoarderCollision() {
   if (position.x >= width -100 || position.x <= 100 || checkCollision() ) {
     velocity.x *= -1.1;
