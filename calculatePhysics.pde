@@ -5,7 +5,7 @@ void calculateVelocity() {
   acceleration.mult(0.5); 
   velocity.add(acceleration);
   position.add(velocity);
-  velocity.limit(vMax); //Damit die velocity nicht endlos groß wird, wird die Länge des Vektors limitert auf 10
+  velocity.limit(vMax); //Damit die velocity nicht endlos groß wird, wird die Länge des Vektors limitert über die vMax Variable
 }
 
 //Überprüft ob eine Kollision mit einer Spielbegrenzung oder einem Hindernis vorliegt

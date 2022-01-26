@@ -30,6 +30,8 @@ void StartScreen() {
   velocity.set(0, 0);
   background(#141E50);
   fill(#E3D39E);
+  textSize(width * 0.05);
+  text("SpaceBalls", width/2, 400);
   textSize(25);
   text("Press M to Start", width/2, height/2);
   gameOver = false;
