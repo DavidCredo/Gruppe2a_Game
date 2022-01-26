@@ -39,11 +39,9 @@ public class Ball  {
     void checkBoarderCollision() {
         if (location.x > width - diameter/2 || location.x < diameter/2) {
             velocity.x *= -1;
-            // this.paint= color(random(255), random(255), random(255));
         } 
         if (location.y > height - diameter/2 || location.y < diameter/2) {
             velocity.y *= -1;
-            // this.paint= color(random(255), random(255), random(255));
         }
     }
 

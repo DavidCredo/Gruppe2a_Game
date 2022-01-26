@@ -1,4 +1,6 @@
 //Befüllt zwei Arrays mit zufälligen floats für die Koordinaten der Hindernisse.
+ArrayList<Ball> Obstacles = new ArrayList<Ball>();
+
 void makeObstacles() {
   for (int i = 0; i < xKoordinaten.length; i++) {
     xKoordinaten[i] = random(200, width - 200);
@@ -14,7 +16,7 @@ void makeObstacles() {
 void placeObstacles (float[] xKoordinaten, float[] yKoordinaten) {
   int obstacleWidth = 100;
   for (int i = 0; i < xKoordinaten.length; i++) {
-    fill(#ff0728);
+    fill(255);
     ellipseMode(CENTER);
     ellipse(xKoordinaten[i], yKoordinaten[i], obstacleWidth, obstacleWidth);
   }
