@@ -5,7 +5,7 @@ ArrayList<Ball> Obstacles = new ArrayList<Ball>();
         Obstacles.get(i).update();
         handleCollision(Obstacles);
         Obstacles.get(i).checkBoarderCollision();
-        Obstacles.get(i).collideWithObject(); 
+         Obstacles.get(i).collideWithObject(); 
     }
     
     for (int j = 0; j < Obstacles.size(); j++) {

@@ -23,15 +23,17 @@ ArrayList<Ball> balls = new ArrayList<Ball>();
         }
 
         for (int i = 0; i < objects.size(); i++) {
+            objects.get(i).isColliding = false;
             ball1 = objects.get(i);
             for (int j = i + 1; j < objects.size(); j++) {
                 ball2 = objects.get(j);
 
                 if(detectCollision(ball1,ball2)) {
-                    ball1.isColliding = true;
-                    ball2.isColliding = true;
+                    objects.get(i).isColliding = true;
+                    objects.get(j).isColliding = true;
                     
                 }
+              
               
             }
         }
