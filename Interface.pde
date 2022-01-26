@@ -1,7 +1,7 @@
 void lebensAnzeige() {  //die hp Anzeige
   showDate();
   textSize(30);
-  text("Leben:", 100, height - 20);
+  text("HP:", 150, height - 20);
   fill(255, 0, 0);
   //je nach Lebenspunkten werden 3, 2, oder 1 Herzen angezeigt.
   if (healthPoints > 50) {
@@ -17,8 +17,8 @@ void lebensAnzeige() {  //die hp Anzeige
     drawHeart(170, height - 45);
   }
 }
-
-/*Funktion die die Herzen für die Lebensanzeige zeichnet. Nimmt 2 float Werte um translate() richtig anzusteuern.
+/*
+Funktion die die Herzen für die Lebensanzeige zeichnet. Nimmt 2 float Werte um translate() richtig anzusteuern.
  Dadurch kann die gleiche Funktion mehrmals aufgerufen werden, aber mit anderen Koordinaten für die Herzen.
  Somit kann die Lebensanzeige variabel gesteuert werden
  */

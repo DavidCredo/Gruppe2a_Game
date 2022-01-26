@@ -20,7 +20,8 @@ void saveScore() {
 void showScore() {
   try {
     String[] lines = loadStrings("score.txt");
-    text(lines[0], width/2, 900);  //hier wird der score des letzen Spiels aus der Texdatei ausgelesen und angezeigt.
+    textSize(30);
+    text(lines[0], width/2, height - 100);  //hier wird der score des letzen Spiels aus der Texdatei ausgelesen und angezeigt.
   }
   catch(NullPointerException e) {     //falls es noch keine Texdatei gibt wird das Spiel trotzdem gestartet
     saveScore();

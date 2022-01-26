@@ -27,10 +27,11 @@ void PauseScreen() {
 void StartScreen() {
   background(#141E50);
   fill(#E3D39E);
-  textSize(100);
-  text("Press M to Start", width/2, 200);
+  textSize(25);
+  text("Press M to Start", width/2, height/2);
   gameOver = false;
   toggleMaxVelocity();
+  textSize(50);
   text("Current velocity setting: " + vMax, width / 2, height - 200);
   showScore();
 }
