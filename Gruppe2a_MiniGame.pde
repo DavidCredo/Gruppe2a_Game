@@ -12,7 +12,7 @@ PFont font;
 
 
 void setup() {
-  font = createFont("Outerorbit-rggRL.ttf", 32);
+  font = createFont("Outerorbit-rggRL.ttf", 32, true);
   textFont(font);
   frameRate(60);
   fullScreen();

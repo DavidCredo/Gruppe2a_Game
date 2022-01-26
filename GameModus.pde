@@ -35,9 +35,10 @@ void StartScreen() {
   gameOver = false;
   toggleMaxVelocity();
   textSize(50);
-  text("Current velocity setting: " + vMax, width / 2, height - 200);
-  textSize(35);
-  text("Toggle with UP and DOWN", width - 500, height - 200);
+  text("velocity setting " + vMax, width / 2, height - 200);
+  textSize(25);
+  rectMode(CENTER);
+  text("press up press down", width /2 + 450 , height - 140, 250, 200);
   showScore();
 }
 
