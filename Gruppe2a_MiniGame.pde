@@ -15,15 +15,18 @@ void setup() {
    music = new SoundFile(this, "Sci-Fi-Dramatic-Theme.mp3");
   font = createFont("Outerorbit-rggRL.ttf", 32, true);
   textFont(font);
-  for (int i = 0; i < 200; ++i) {
-        balls.add(new Ball(2));
+  for (int i = 0; i < 150; ++i) {
+        balls.add(new Ball(2, color(random(255))));
     }
+  for (int i = 0; i < 20; ++i) {
+        Obstacles.add(new Ball(100, color(255)));
+  }
   frameRate(60);
   fullScreen();
   background(#2d365e);
   textSize(150);
   textAlign(CENTER);
-  makeObstacles();
+ // makeObstacles();
   createBoarder();
   playMusic();
 }

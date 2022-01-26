@@ -9,13 +9,13 @@ public class Ball  {
     float rotationAngle;
     boolean isColliding;
 
-    public Ball (float r) {
-        this.diameter = r;
+    public Ball (float radius, color p) {
+        this.diameter = radius;
         this.location = new PVector(random(diameter, width - diameter), random(diameter, height - diameter));
         this.velocity =  new PVector(random(-1, 2), random(-1, 2));
         this.acceleration = new PVector(random(-1, 2), random(-1, 2));
-        this.vMax = 3;
-        this.paint = color(random(255));
+        this.vMax = 10;
+        this.paint = p;
         this.rotationAngle = 0;
         this.isColliding = false;
     }

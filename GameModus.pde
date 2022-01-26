@@ -9,7 +9,8 @@ void Spiel () {
   calculateVelocity();
   drawPlayer();
   checkBoarderCollision();
-  placeObstacles(xKoordinaten, yKoordinaten);
+  showObstacles();
+  //placeObstacles(xKoordinaten, yKoordinaten);
   takeDamage();
   lebensAnzeige();
   countScore();

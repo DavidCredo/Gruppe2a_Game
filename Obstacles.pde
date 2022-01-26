@@ -1,5 +1,18 @@
 //Befüllt zwei Arrays mit zufälligen floats für die Koordinaten der Hindernisse.
 ArrayList<Ball> Obstacles = new ArrayList<Ball>();
+ void showObstacles() {
+         for (int i = 0; i < Obstacles.size(); i++) {
+        Obstacles.get(i).update();
+        handleCollision(Obstacles);
+        Obstacles.get(i).checkBoarderCollision();
+        Obstacles.get(i).collideWithObject(); 
+    }
+    
+    for (int j = 0; j < Obstacles.size(); j++) {
+          Obstacles.get(j).display();
+      }
+    }
+
 
 void makeObstacles() {
   for (int i = 0; i < xKoordinaten.length; i++) {
@@ -26,9 +39,9 @@ void placeObstacles (float[] xKoordinaten, float[] yKoordinaten) {
 boolean checkCollision() {
  
 
-  for (int i = 0; i < xKoordinaten.length; i++) {
-    float distX = position.x - xKoordinaten[i];
-    float distY = position.y - yKoordinaten[i];
+  for (int i = 0; i < Obstacles.size(); i++) {
+    float distX = position.x - Obstacles.get(i).location.x;
+    float distY = position.y - Obstacles.get(i).location.y;
     float distance = sqrt((distX * distX) + (distY * distY));
     if (distance <= playerWidth) {
       return true;
