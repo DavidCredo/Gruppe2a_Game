@@ -15,7 +15,7 @@ void setup() {
    music = new SoundFile(this, "Sci-Fi-Dramatic-Theme.mp3");
   font = createFont("Outerorbit-rggRL.ttf", 32, true);
   textFont(font);
-  for (int i = 0; i < 150; ++i) {
+  for (int i = 0; i < 100; ++i) {
         balls.add(new Ball(2, color(random(255))));
     }
   for (int i = 0; i < 20; ++i) {
