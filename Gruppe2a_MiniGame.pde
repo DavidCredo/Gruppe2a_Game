@@ -8,8 +8,13 @@ PVector position = new PVector(120, 120);
 PVector velocity = new PVector(0, 0);
 int score = 0;
 int playerWidth = 100;
+PFont font;
+
 
 void setup() {
+  
+  font = createFont("Outerorbit-rggRL.ttf", 32);
+  textFont(font);
   frameRate(60);
   fullScreen();
   background(#485698);
