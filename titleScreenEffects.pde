@@ -1,17 +1,5 @@
 ArrayList<Ball> balls = new ArrayList<Ball>(); 
 
-
-    // for (int i = 0; i < balls.size(); i++) {
-    //     balls.get(i).update();
-    //     handleCollision();
-    //     balls.get(i).checkBoarderCollision();
-    //     balls.get(i).collideWithObject(); 
-    // }
-    
-    // for (int j = 0; j < balls.size(); j++) {
-    //       balls.get(j).display();
-    // }
-
     void titleScreenLoop() {
          for (int i = 0; i < balls.size(); i++) {
         balls.get(i).update();

@@ -36,6 +36,8 @@ void StartScreen() {
   text("SpaceBalls", width/2, 400);
   textSize(25);
   text("Press M to Start", width/2, height/2);
+  titleScreenLoop();
+  fill(255);
   gameOver = false;
   toggleMaxVelocity();
   textSize(50);
