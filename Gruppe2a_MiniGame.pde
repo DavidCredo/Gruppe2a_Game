@@ -12,6 +12,7 @@ PFont font;
 
 
 void setup() {
+   music = new SoundFile(this, "Sci-Fi-Dramatic-Theme.mp3");
   font = createFont("Outerorbit-rggRL.ttf", 32, true);
   textFont(font);
    for (int i = 0; i < 200; ++i) {
@@ -28,6 +29,7 @@ void setup() {
 }
 
 void draw() {
+  
   toggleMusic();
   if (isStart) {
     StartScreen();

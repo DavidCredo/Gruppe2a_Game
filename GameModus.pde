@@ -29,7 +29,9 @@ void PauseScreen() {
 void StartScreen() {
   velocity.set(0, 0);
   background(0);
-  fill(255);
+  background(#141E50);
+  textSize(width * 0.05);
+  text("SpaceBalls", width/2, 400);
   textSize(25);
   text("Press M to Start", width/2, height/2);
   titleScreenLoop();
