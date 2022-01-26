@@ -31,5 +31,6 @@
 
 Bei der Konzeptionierung der Kollision hat uns [dieser Artikel von Spicy Yoghurt](https://spicyyoghurt.com/tutorials/html5-javascript-game-development/collision-detection-physics) geholfen.<br>
 Die [Nature of Code]() Playlist war, über die gesamte Zeit des Projekts, auch sehr hilfreich. <br>
+Der Soundtrack stammt von [Twisterium](https://hypeddit.com/track/w3vb4z).<br>
 Den verwendeten Font haben wir [hierher](https://www.fontspace.com/outerorbit-font-f42000).
 *Non-commercial use license!*
