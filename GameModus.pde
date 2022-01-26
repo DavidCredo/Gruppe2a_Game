@@ -1,9 +1,8 @@
 void Spiel () {
-  background(80);
   rectMode(CORNERS);
   rect(0, 0, width, height);
   FeldAnimation();
-  fill (#5438DC);
+  fill (#1b1730);
   rect(50, 50, width - 50, height - 50);
   fill(255);
   MausSteuern();
@@ -20,11 +19,15 @@ void PauseScreen() {
   fill(#E3D39E);
   background(#141E50);
   textSize(100);
-  text("Pause", width/2, 200);
-  text("Press i to resume", width/2, height/2);
+  text("Pause", width/2, 400);
+  textSize(50);
+  text("Press i to resume", width/2, 700);
+  text("Press x to get back to menu", width/2, 900);
+  triggerMenu();
 }
 
 void StartScreen() {
+  velocity.set(0, 0);
   background(#141E50);
   fill(#E3D39E);
   textSize(25);
@@ -33,6 +36,8 @@ void StartScreen() {
   toggleMaxVelocity();
   textSize(50);
   text("Current velocity setting: " + vMax, width / 2, height - 200);
+  textSize(35);
+  text("Toggle with UP and DOWN", width - 500, height - 200);
   showScore();
 }
 
@@ -40,7 +45,9 @@ void gameOverScreen() {
   background(#FF4500);
   fill(255);
   textSize(100);
-  text("Game Over! Press X to get back to menu", width/2, 200);
+  text("Game Over!", width/2, 400);
+  textSize(50);
+  text("Press X to get back to menu", width/2, 700);
   velocity.set(0, 0);
   saveScore();
 }

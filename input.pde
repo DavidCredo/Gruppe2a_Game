@@ -34,7 +34,7 @@ void triggerMenu() {
     if (key == 'm' && !isPause && !gameOver) {
       isStart = false;
       isPlaying = true;
-    } else if (key == 'x' && gameOver) {
+    } else if (key == 'x' && gameOver || key == 'x' && isPause ) {
       isStart = true;
       isPlaying = false;
       isPause = false;
@@ -66,7 +66,7 @@ void toggleMaxVelocity() {
   if(keyPressed) {
     if (keyCode == UP && vMax < 20) {
       vMax += 0.5;
-    } else if ( keyCode == DOWN && vMax > 2) {
+    } else if ( keyCode == DOWN && vMax > 7.5) {
       vMax -= 0.5;
     }
   }
