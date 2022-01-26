@@ -28,10 +28,12 @@ void PauseScreen() {
 
 void StartScreen() {
   velocity.set(0, 0);
-  background(#141E50);
-  fill(#E3D39E);
+  background(0);
+  fill(255);
   textSize(25);
   text("Press M to Start", width/2, height/2);
+  titleScreenLoop();
+  fill(255);
   gameOver = false;
   toggleMaxVelocity();
   textSize(50);
