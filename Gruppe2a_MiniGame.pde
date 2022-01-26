@@ -26,6 +26,7 @@ void setup() {
 }
 
 void draw() {
+  
   toggleMusic();
   if (isStart) {
     StartScreen();

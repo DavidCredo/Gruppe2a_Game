@@ -4,8 +4,8 @@ SoundFile music;
 
 //Funktion, die die Hintergrundmusik abspielt
 void playMusic() {
-  music.amp(0.5);
- // music.loop();
+  music.amp(0.2);
+  music.loop();
 }
 //Startet oder stoppt die Musik je nach game state.
 void toggleMusic() {
