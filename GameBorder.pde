@@ -28,7 +28,7 @@ void createBoarder() {
 }
 
 void FeldAnimation() {
-  background(#ED7D0C);
+  background(50);
   fill(#DE0B0B);
   noStroke();
 

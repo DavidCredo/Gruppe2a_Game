@@ -1,11 +1,16 @@
-//Befüllt zwei Arrays mit zufälligen floats für die Koordinaten der Hindernisse.
+/*ArrayList mit Objekten vom Typ Ball
+Alternativ hätte man auch noch eine child-Klasse von "Ball" schreiben können,
+um Besonderheiten der Obstacles dort separat zu behandeln. Aus Zeitmangel wurde dies nicht mehr umgesetzt.
+*/
+
 ArrayList<Ball> Obstacles = new ArrayList<Ball>();
  void showObstacles() {
          for (int i = 0; i < Obstacles.size(); i++) {
         Obstacles.get(i).update();
+        Obstacles.get(i).collideWithObject(); 
         handleCollision(Obstacles);
         Obstacles.get(i).checkBoarderCollision();
-         Obstacles.get(i).collideWithObject(); 
+        
     }
     
     for (int j = 0; j < Obstacles.size(); j++) {

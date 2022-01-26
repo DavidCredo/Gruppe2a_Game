@@ -1,3 +1,4 @@
+//ArrayList wird verwendet, um effizient viele Objekte vom Typ Ball zu initialisieren
 ArrayList<Ball> balls = new ArrayList<Ball>(); 
 
     void titleScreenLoop() {
@@ -15,12 +16,7 @@ ArrayList<Ball> balls = new ArrayList<Ball>();
 
     void handleCollision(ArrayList<Ball> objects) {
         Ball ball1;
-        Ball ball2;
-
-        //Resetting Collision state 
-        for (int i = 0; i < objects.size(); i++) {
-            objects.get(i).isColliding = false;
-        }
+        Ball ball2;      
 
         for (int i = 0; i < objects.size(); i++) {
             objects.get(i).isColliding = false;
@@ -32,15 +28,14 @@ ArrayList<Ball> balls = new ArrayList<Ball>();
                     objects.get(i).isColliding = true;
                     objects.get(j).isColliding = true;
                     
-                }
-              
+                }             
               
             }
         }
     }
 
     boolean detectCollision(Ball a, Ball b) {
-        if (dist(a.location.x, a.location.y, b.location.x, b.location.y) < (a.diameter / 2) + (b.diameter / 2) || checkCollision()) {
+        if (dist(a.location.x, a.location.y, b.location.x, b.location.y) < (a.diameter / 2) + (b.diameter / 2)) {
             return true;
         }
         return false;

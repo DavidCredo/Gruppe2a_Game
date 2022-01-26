@@ -2,7 +2,7 @@ void Spiel () {
   rectMode(CORNERS);
   rect(0, 0, width, height);
   FeldAnimation();
-  fill (0);
+  fill(0);
   rect(50, 50, width - 50, height - 50);
   fill(255);
   MausSteuern();
@@ -17,8 +17,8 @@ void Spiel () {
 }
 
 void PauseScreen() {
-  fill(#E3D39E);
-  background(#141E50);
+  fill(255);
+  background(0);
   textSize(100);
   text("Pause", width/2, 400);
   textSize(50);
@@ -50,6 +50,9 @@ void StartScreen() {
 }
 
 void gameOverScreen() {
+  for (int i = 0; i < Obstacles.size(); ++i) {
+    Obstacles.get(i).setRandomLocation();
+  }
   background(#FF4500);
   fill(255);
   textSize(100);

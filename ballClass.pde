@@ -1,27 +1,28 @@
+/* Hier haben wir Objekt orientiert gearbeitet.
+Die Ball-Klasse wird ein mal verwendet um die Sterne auf dem Titelscreen zu animieren und ein weiteres Mal,
+um die Hindernisse im Spiel darzustellen. Wir konnten uns somit viel Code sparen
+*/
 public class Ball  {
 
     float diameter;
     PVector location;
     PVector velocity;
-    PVector acceleration;
     float vMax;
     color paint;
-    float rotationAngle;
     boolean isColliding;
 
-    public Ball (float radius, color p) {
-        this.diameter = radius;
-        this.location = new PVector(random(diameter, width - diameter), random(diameter, height - diameter));
-        this.velocity =  new PVector(random(-1, 2), random(-1, 2));
-        this.acceleration = new PVector(random(-1, 2), random(-1, 2));
-        this.vMax = 10;
-        this.paint = p;
-        this.rotationAngle = 0;
-        this.isColliding = false;
-    }
+    /*Um die Klasse vielseitiger einsetzen zu können, nimmt der Constructor einen float und eine Farbe als Parameter.
+    float diam wird verwendet um den Durchmesser der "Bälle" variabel anpassen zu können. Analog dazu die color Variable, 
+    um kontextabhängig die Farbe zu variieren.
+    */
 
-    void setIsColliding(boolean b) {
-        this.isColliding = b;
+    public Ball (float diam, color p) {
+        this.diameter = diam;
+        this.location = new PVector(random(diameter, width - diameter), random(diameter, height - diameter));
+        this.velocity =  new PVector(random(-10, 10), random(-10, 10));
+        this.vMax = 8;
+        this.paint = p;
+        this.isColliding = false;
     }
 
     void update() {       
@@ -37,17 +38,22 @@ public class Ball  {
     }
 
     void checkBoarderCollision() {
-        if (location.x > width - diameter/2 || location.x < diameter/2) {
+        if (location.x > width - diameter || location.x < diameter) {
             velocity.x *= -1;
         } 
-        if (location.y > height - diameter/2 || location.y < diameter/2) {
+        if (location.y > height - diameter || location.y < diameter) {
             velocity.y *= -1;
         }
     }
 
     void collideWithObject() {
         if(isColliding) {
-          velocity.mult(-1.5);
+          velocity.x *= -2;
+          velocity.y *= -2;
         } 
+    }
+
+    void setRandomLocation() {
+        this.location = new PVector(random(diameter, width - diameter), random(diameter, height - diameter));;
     }
 }
