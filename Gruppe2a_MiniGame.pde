@@ -12,6 +12,7 @@ PFont font;
 
 
 void setup() {
+   music = new SoundFile(this, "Sci-Fi-Dramatic-Theme.mp3");
   font = createFont("Outerorbit-rggRL.ttf", 32, true);
   textFont(font);
   frameRate(60);

@@ -4,8 +4,6 @@ SoundFile music;
 
 //Funktion, die die Hintergrundmusik abspielt
 void playMusic() {
-
-  music = new SoundFile(this, "Sci-Fi-Dramatic-Theme.mp3");
   music.amp(0.5);
  // music.loop();
 }
