@@ -26,7 +26,6 @@ void setup() {
   background(#2d365e);
   textSize(150);
   textAlign(CENTER);
- // makeObstacles();
   createBoarder();
   playMusic();
 }

@@ -41,7 +41,6 @@ void triggerMenu() {
       healthPoints = 100;
       position.x= 100;
       position.y= 100;
-      makeObstacles();
     }
   }
 }

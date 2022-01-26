@@ -11,7 +11,8 @@ public class Ball  {
     color paint;
     boolean isColliding;
 
-    /*Um die Klasse vielseitiger einsetzen zu können, nimmt der Constructor einen float und eine Farbe als Parameter.
+    /*
+    Um die Klasse vielseitiger einsetzen zu können, nimmt der Constructor einen float und eine Farbe als Parameter.
     float diam wird verwendet um den Durchmesser der "Bälle" variabel anpassen zu können. Analog dazu die color Variable, 
     um kontextabhängig die Farbe zu variieren.
     */
@@ -33,6 +34,7 @@ public class Ball  {
     void display() {
         ellipseMode(CENTER);
         noStroke();
+        collideWithObject();
         fill(paint);            
         ellipse(location.x, location.y, diameter, diameter);        
     }
@@ -47,9 +49,8 @@ public class Ball  {
     }
 
     void collideWithObject() {
-        if(isColliding) {
-          velocity.x *= -2;
-          velocity.y *= -2;
+        if(this.isColliding) {
+         velocity.mult(-1.5);
         } 
     }
 

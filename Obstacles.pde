@@ -7,7 +7,6 @@ ArrayList<Ball> Obstacles = new ArrayList<Ball>();
  void showObstacles() {
          for (int i = 0; i < Obstacles.size(); i++) {
         Obstacles.get(i).update();
-        Obstacles.get(i).collideWithObject(); 
         handleCollision(Obstacles);
         Obstacles.get(i).checkBoarderCollision();
         
@@ -17,29 +16,7 @@ ArrayList<Ball> Obstacles = new ArrayList<Ball>();
           Obstacles.get(j).display();
       }
     }
-
-
-void makeObstacles() {
-  for (int i = 0; i < xKoordinaten.length; i++) {
-    xKoordinaten[i] = random(200, width - 200);
-    yKoordinaten[i] = random(200, height - 200);
-  }
-}
-
-/*Platziert die Hindernisse, durch Trennung der Funktionen werden zwei Objektiven erzielt =>
- 1. Separation of Concerns
- 2. Die Koordinaten können in setup() erstellt werden und werden somit nicht in jedem draw
- Durchlauf neu generiert.
- */
-void placeObstacles (float[] xKoordinaten, float[] yKoordinaten) {
-  int obstacleWidth = 100;
-  for (int i = 0; i < xKoordinaten.length; i++) {
-    fill(255);
-    ellipseMode(CENTER);
-    ellipse(xKoordinaten[i], yKoordinaten[i], obstacleWidth, obstacleWidth);
-  }
-}
-
+    
 //Überprüft, ob der Spieler mit einem Hindernis kollidiert.
 boolean checkCollision() {
  

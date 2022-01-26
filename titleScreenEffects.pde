@@ -6,7 +6,6 @@ ArrayList<Ball> balls = new ArrayList<Ball>();
         balls.get(i).update();
         handleCollision(balls);
         balls.get(i).checkBoarderCollision();
-        balls.get(i).collideWithObject(); 
     }
     
     for (int j = 0; j < balls.size(); j++) {
@@ -35,7 +34,7 @@ ArrayList<Ball> balls = new ArrayList<Ball>();
     }
 
     boolean detectCollision(Ball a, Ball b) {
-        if (dist(a.location.x, a.location.y, b.location.x, b.location.y) < (a.diameter / 2) + (b.diameter / 2)) {
+        if (dist(a.location.x, a.location.y, b.location.x, b.location.y) <= (a.diameter / 2) + (b.diameter / 2)) {
             return true;
         }
         return false;

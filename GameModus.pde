@@ -10,7 +10,6 @@ void Spiel () {
   drawPlayer();
   checkBoarderCollision();
   showObstacles();
-  //placeObstacles(xKoordinaten, yKoordinaten);
   takeDamage();
   lebensAnzeige();
   countScore();
