@@ -44,5 +44,5 @@ void showDate() {
   int second = second();
   fill(255);
   text(year + " - " + month + " - " + day, 600, height - 20);
-  text(hour + " - " + minute + " - " + second, 800, height -20);
+  text(hour + " - " + minute + " - " + second, 900, height -20);
 }
