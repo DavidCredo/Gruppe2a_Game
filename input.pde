@@ -61,3 +61,13 @@ void MausSteuern() {
     }
   }
 }
+
+void toggleMaxVelocity() {
+  if(keyPressed) {
+    if (keyCode == UP && vMax < 20) {
+      vMax += 0.5;
+    } else if ( keyCode == DOWN && vMax > 2) {
+      vMax -= 0.5;
+    }
+  }
+}
