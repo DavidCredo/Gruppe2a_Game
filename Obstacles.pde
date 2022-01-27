@@ -23,12 +23,15 @@ boolean checkCollision() {
     float distX = position.x - Obstacles.get(i).location.x;
     float distY = position.y - Obstacles.get(i).location.y;
     float distance = sqrt((distX * distX) + (distY * distY));
-    if (distance < playerWidth + 2) {
+    if (distance < playerWidth + 5) {
       return true;
     }
   }
   return false;
 }
+
+//Um Kollisionen der Hindernisse mit dem Spieler zu handlen, haben wir die Logik aus der handleCollision() Funktion in titleScreenEffects.pde abgewandelt.
+//Diese Lösung ist in sofern suboptimal, dass man die ursprüngliche Funktion nicht wiederverwendet. Durch Refactoring des Codes wäre das Problem jedoch leicht behoben.
 
 void handleObstacleCollisionOnPlayer(ArrayList<Ball> obstacs) {
    Ball obstacle;
@@ -40,9 +43,6 @@ void handleObstacleCollisionOnPlayer(ArrayList<Ball> obstacs) {
       
       PVector collisionNormal = PVector.sub(obstacle.location, position);
       collisionNormal.normalize();
-      PVector relativeVelocity = PVector.sub(obstacle.velocity, velocity);
-      relativeVelocity.limit(10);
-      float speed = PVector.dot(relativeVelocity, collisionNormal);
       
       obstacle.velocity.add(collisionNormal);
       velocity.sub(collisionNormal);

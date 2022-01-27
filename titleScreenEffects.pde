@@ -13,6 +13,10 @@ ArrayList<Ball> balls = new ArrayList<Ball>();
     }
     }
 
+/*
+Diese Funktion iteriert über sämtliche Elemente einer ArrayList vom Typ Ball und prüft auf Kollisionen mit jedem anderen Element in dem Array.
+Wenn eine Kollision vorliegt, wird der Richtungsvektor der Kollision berechnet und auf die kollidierenden Elemente addiert/subtrahiert.
+*/
     void handleCollision(ArrayList<Ball> objects) {
         Ball ball1;
         Ball ball2;      
@@ -29,9 +33,6 @@ ArrayList<Ball> balls = new ArrayList<Ball>();
 
                     PVector collisionNormal = PVector.sub(ball2.location, ball1.location);
                     collisionNormal.normalize();
-                    PVector relativeVelocity = PVector.sub(ball2.velocity, ball1.velocity);
-                    relativeVelocity.limit(10);
-                    float speed = PVector.dot(relativeVelocity, collisionNormal);
                     
                     ball1.velocity.sub(collisionNormal);
                     ball2.velocity.add(collisionNormal);
@@ -40,7 +41,7 @@ ArrayList<Ball> balls = new ArrayList<Ball>();
             }
         }
     }
-
+//Prüft ob zwei Objekte vom Typ Ball miteinander kollidiert sind und gibt entsprechend einen Boolean zurück.
     boolean detectCollision(Ball a, Ball b) {
         if (dist(a.location.x, a.location.y, b.location.x, b.location.y) <= (a.diameter / 2) + (b.diameter / 2)) {
             return true;

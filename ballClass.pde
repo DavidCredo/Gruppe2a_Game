@@ -25,7 +25,7 @@ public class Ball  {
         this.paint = p;
         this.isColliding = false;
     }
-
+//Methode zum updaten der aktuellen Position des Objekts. Durch Trennung der Funktionalitäten von update() und display() sind akkuratere Kollisionen darstellbar.
     void update() {       
         location.add(velocity);
         velocity.limit(vMax);
@@ -37,7 +37,7 @@ public class Ball  {
         fill(paint);            
         ellipse(location.x, location.y, diameter, diameter);        
     }
-
+//Überprüft ob eine Kollision mit dem Spielfeldrand vorliegt und kehrt entsprechend die Komponente des velocity Vektors um.
     void checkBoarderCollision() {
         if (location.x > width - diameter || location.x < diameter) {
             velocity.x *= -1;
@@ -46,13 +46,7 @@ public class Ball  {
             velocity.y *= -1;
         }
     }
-
-    void collideWithObject() {
-        if(this.isColliding) {
-         velocity.mult(-1.5);
-        } 
-    }
-
+//Methode um nach GameOver oder anderen Szenarien die Position des Objekts neu zu randomisieren.
     void setRandomLocation() {
         this.location = new PVector(random(diameter, width - diameter), random(diameter, height - diameter));;
     }
