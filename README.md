@@ -8,7 +8,7 @@
 - **Anforderung 5** Das Spiel verwendet mind. Hintergrundmusik
 - **Anforderung 8** Die Spielfigur nimmt Schaden und „stirbt“ irgendwann.
 - **Anforderung 10** Das Spiel hat Hindernisse
-- **Anforderung 12** Die Spielfigur beschleunigt korrekt, die maximlae Beschleunigung & maximale Geschwindigkeit sind anpassbar
+- **Anforderung 12** Die Spielfigur beschleunigt korrekt, die maximale Beschleunigung & maximale Geschwindigkeit sind anpassbar
 - **Anforderung 13** Die Spielfigur prallt vom Spielfeldrand und den Hindernissen physikalisch korrekt ab
 
 ### Anton
