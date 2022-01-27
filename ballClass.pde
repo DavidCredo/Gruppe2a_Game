@@ -34,7 +34,6 @@ public class Ball  {
     void display() {
         ellipseMode(CENTER);
         noStroke();
-        collideWithObject();
         fill(paint);            
         ellipse(location.x, location.y, diameter, diameter);        
     }

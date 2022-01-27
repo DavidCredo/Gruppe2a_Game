@@ -19,16 +19,33 @@ ArrayList<Ball> Obstacles = new ArrayList<Ball>();
     
 //Überprüft, ob der Spieler mit einem Hindernis kollidiert.
 boolean checkCollision() {
- 
-
   for (int i = 0; i < Obstacles.size(); i++) {
     float distX = position.x - Obstacles.get(i).location.x;
     float distY = position.y - Obstacles.get(i).location.y;
     float distance = sqrt((distX * distX) + (distY * distY));
-    if (distance <= playerWidth) {
+    if (distance < playerWidth + 2) {
       return true;
     }
   }
   return false;
 }
 
+void handleObstacleCollisionOnPlayer(ArrayList<Ball> obstacs) {
+   Ball obstacle;
+  for(int i = 0; i < obstacs.size(); i++) {
+    obstacle = obstacs.get(i);
+    if(checkCollision()) {
+      
+      obstacle.isColliding = true;
+      
+      PVector collisionNormal = PVector.sub(obstacle.location, position);
+      collisionNormal.normalize();
+      PVector relativeVelocity = PVector.sub(obstacle.velocity, velocity);
+      relativeVelocity.limit(10);
+      float speed = PVector.dot(relativeVelocity, collisionNormal);
+      
+      obstacle.velocity.add(collisionNormal);
+      velocity.sub(collisionNormal);
+    }
+  }
+}

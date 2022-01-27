@@ -24,9 +24,17 @@ ArrayList<Ball> balls = new ArrayList<Ball>();
                 ball2 = objects.get(j);
 
                 if(detectCollision(ball1,ball2)) {
-                    objects.get(i).isColliding = true;
-                    objects.get(j).isColliding = true;
+                    ball1.isColliding = true;
+                    ball2.isColliding = true;
+
+                    PVector collisionNormal = PVector.sub(ball2.location, ball1.location);
+                    collisionNormal.normalize();
+                    PVector relativeVelocity = PVector.sub(ball2.velocity, ball1.velocity);
+                    relativeVelocity.limit(10);
+                    float speed = PVector.dot(relativeVelocity, collisionNormal);
                     
+                    ball1.velocity.sub(collisionNormal);
+                    ball2.velocity.add(collisionNormal);
                 }             
               
             }

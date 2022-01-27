@@ -6,6 +6,7 @@ void Spiel () {
   rect(50, 50, width - 50, height - 50);
   fill(255);
   MausSteuern();
+  handleObstacleCollisionOnPlayer(Obstacles);
   calculateVelocity();
   drawPlayer();
   checkBoarderCollision();

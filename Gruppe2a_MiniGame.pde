@@ -16,7 +16,7 @@ void setup() {
   font = createFont("Outerorbit-rggRL.ttf", 32, true);
   textFont(font);
   for (int i = 0; i < 100; ++i) {
-        balls.add(new Ball(4, color(random(255))));
+        balls.add(new Ball(10, color(random(255))));
     }
   for (int i = 0; i < 20; ++i) {
         Obstacles.add(new Ball(100, color(255)));
