@@ -46,6 +46,7 @@ void StartScreen() {
   textSize(25);
   rectMode(CENTER);
   text("press up press down", width /2 + 450, height - 140, 250, 200);
+  frameCount = 0;
   showScore();
 }
 

@@ -1,7 +1,9 @@
 String[] scorearray = new String[1];
 String currentScore;
 
-
+void initializeScore() {
+  score = 0;
+}
 void countScore() {   // hier wird der aktuelle score berechnet. 1 score punkt pro sekunde, da das Program mit 60fps läuft.
   score = frameCount/60;
 }
