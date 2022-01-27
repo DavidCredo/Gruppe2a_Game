@@ -1,5 +1,3 @@
-
-
 int blubbGroeße = 0;
 
 int  [] blubbXLinks = new  int [20];

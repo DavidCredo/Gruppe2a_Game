@@ -2,7 +2,7 @@ float vMax = 10;
 PVector acceleration;
 void calculateVelocity() {
   acceleration = inputVector().normalize(); //Richtungsvektor wird mit acceleration gleichgesetzt, da der Spieler keine "Masse" hat
-  //acceleration.mult(0.5); 
+  //acceleration.mult(0.5);
   velocity.add(acceleration);
   position.add(velocity);
   velocity.limit(vMax); //Damit die velocity nicht endlos groß wird, wird die Länge des Vektors limitert über die vMax Variable

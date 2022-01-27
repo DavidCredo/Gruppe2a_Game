@@ -48,21 +48,21 @@ void triggerMenu() {
 //Mouse Input zur Steuerung des Spielers
 void MausSteuern() {
   if (mousePressed &&
-     (mouseX > 100 && mouseX < width - 100) &&
-     (mouseY > 100 && mouseY < height - 100)) {
+    (mouseX > 100 && mouseX < width - 100) &&
+    (mouseY > 100 && mouseY < height - 100)) {
     PVector mouseControl = new PVector (0, 0);
     mouseControl.x= mouseX - position.x;
     mouseControl.y= mouseY - position.y;
     mouseControl.normalize();
     mouseControl.mult(10);
-    if(dist(mouseControl.x, mouseControl.y, position.x, position.y) > playerWidth) {
-    velocity.add(mouseControl);
+    if (dist(mouseControl.x, mouseControl.y, position.x, position.y) > playerWidth) {
+      velocity.add(mouseControl);
     }
   }
 }
 
 void toggleMaxVelocity() {
-  if(keyPressed) {
+  if (keyPressed) {
     if (keyCode == UP && vMax < 20) {
       vMax += 0.5;
     } else if ( keyCode == DOWN && vMax > 7.5) {

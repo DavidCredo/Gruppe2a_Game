@@ -45,7 +45,7 @@ void StartScreen() {
   text("velocity setting " + vMax, width / 2, height - 200);
   textSize(25);
   rectMode(CENTER);
-  text("press up press down", width /2 + 450 , height - 140, 250, 200);
+  text("press up press down", width /2 + 450, height - 140, 250, 200);
   showScore();
 }
 

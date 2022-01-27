@@ -12,14 +12,14 @@ PFont font;
 
 
 void setup() {
-   music = new SoundFile(this, "Sci-Fi-Dramatic-Theme.mp3");
+  music = new SoundFile(this, "Sci-Fi-Dramatic-Theme.mp3");
   font = createFont("Outerorbit-rggRL.ttf", 32, true);
   textFont(font);
-  for (int i = 0; i < 100; ++i) {
-        balls.add(new Ball(10, color(random(255))));
-    }
-  for (int i = 0; i < 20; ++i) {
-        Obstacles.add(new Ball(100, color(255)));
+  for (int i = 0; i < 100; i++) {
+    balls.add(new Ball(10, color(random(255))));
+  }
+  for (int i = 0; i < 20; i++) {
+    Obstacles.add(new Ball(100, color(255)));
   }
   frameRate(60);
   fullScreen();
@@ -31,7 +31,7 @@ void setup() {
 }
 
 void draw() {
-  
+
   toggleMusic();
   if (isStart) {
     StartScreen();
